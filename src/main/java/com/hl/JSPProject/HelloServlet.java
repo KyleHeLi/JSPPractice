@@ -1,21 +1,36 @@
 package com.hl.JSPProject;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 
 public class HelloServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) {
+    private String message;
 
-        try {
-            response.getWriter().println("<h1>Hello Servlet!</h1");
-            response.getWriter().println(new Date().toLocaleString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void init() throws ServletException {
+        message = "Hello World!";
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+        // Set response content type
+        response.setContentType("text/html");
+
+        // Actual logic
+        PrintWriter out = response.getWriter();
+        out.println("<h1>" + message + "</h1>");
+        out.println("<h2>Hello Servlet!</h2>");
+        out.println(new Date().toLocaleString());
+    }
+
+    public void destroy() {
+
     }
 }
 
