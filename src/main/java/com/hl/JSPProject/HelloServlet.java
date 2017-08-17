@@ -34,7 +34,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void destroy() {
-
+    	// Try to do something
     }
 }
 
