@@ -10,7 +10,11 @@ import java.util.Date;
 
 public class HelloServlet extends HttpServlet {
 
-    private String message;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -366407372220388227L;
+	private String message;
 
     public void init() throws ServletException {
         message = "Hello World!";
@@ -26,7 +30,7 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<h1>" + message + "</h1>");
         out.println("<h2>Hello Servlet!</h2>");
-        out.println(new Date().toLocaleString());
+        out.println(new Date().toString());
     }
 
     public void destroy() {
