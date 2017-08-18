@@ -43,4 +43,15 @@
         <servlet-name>com.hl.JSPProject.ReadParams</servlet-name>
         <url-pattern>/ReadParams</url-pattern>
     </servlet-mapping>
+    
+        <!-- LoginServlet -->
+    <servlet>
+        <servlet-name>com.hl.how2j.LoginServlet</servlet-name>
+        <servlet-class>com.hl.how2j.LoginServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>com.hl.how2j.LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 </web-app>
