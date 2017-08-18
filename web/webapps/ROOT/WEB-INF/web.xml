@@ -32,4 +32,15 @@
         <servlet-name>com.hl.JSPProject.CheckBox</servlet-name>
         <url-pattern>/CheckBox</url-pattern>
     </servlet-mapping>
+    
+    <!-- ReadParams -->
+    <servlet>
+        <servlet-name>com.hl.JSPProject.ReadParams</servlet-name>
+        <servlet-class>com.hl.JSPProject.ReadParams</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>com.hl.JSPProject.ReadParams</servlet-name>
+        <url-pattern>/ReadParams</url-pattern>
+    </servlet-mapping>
 </web-app>
