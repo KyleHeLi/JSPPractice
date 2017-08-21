@@ -32,4 +32,8 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println(html);
     }
+    
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
 }
