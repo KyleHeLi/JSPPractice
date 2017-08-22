@@ -45,7 +45,7 @@
         <url-pattern>/ReadParams</url-pattern>
     </servlet-mapping>
     
-        <!-- LoginServlet -->
+    <!-- LoginServlet -->
     <servlet>
         <servlet-name>com.hl.how2j.LoginServlet</servlet-name>
         <servlet-class>com.hl.how2j.LoginServlet</servlet-class>
@@ -54,5 +54,16 @@
     <servlet-mapping>
         <servlet-name>com.hl.how2j.LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <!-- LoginRequestServlet -->
+    <servlet>
+        <servlet-name>com.hl.how2j.LoginRequestServlet</servlet-name>
+        <servlet-class>com.hl.how2j.LoginRequestServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>com.hl.how2j.LoginRequestServlet</servlet-name>
+        <url-pattern>/LoginRequest</url-pattern>
     </servlet-mapping>
 </web-app>
