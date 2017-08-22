@@ -22,18 +22,20 @@ public class LoginServlet extends HttpServlet {
         System.out.println("Username: " + username);
         System.out.println("Passwrod: " + password);
         
-        String html = null;
+//        String html = null;
         if ("admin".equals(username) && "123".equals(password)) {
-            html = "<div style=\"color:green\">success</div>";
+//            html = "<div style=\"color:green\">success</div>";
+            request.getRequestDispatcher("success.html").forward(request, response);
         } else {
-            html = "<div style=\"color:red\">failed</div>";
+//            html = "<div style=\"color:red\">failed</div>";
+            response.sendRedirect("fail.html");
         }
         
-        PrintWriter out = response.getWriter();
-        out.println(html);
+//        PrintWriter out = response.getWriter();
+//        out.println(html);
     }
     
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
-    }
+//    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        doPost(request, response);
+//    }
 }
