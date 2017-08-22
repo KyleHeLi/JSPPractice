@@ -17,6 +17,7 @@ public class HelloServlet extends HttpServlet {
 	private String message;
 
     public void init() throws ServletException {
+        System.out.println("init of Hello Servlet");
         message = "Hello World!";
     }
 

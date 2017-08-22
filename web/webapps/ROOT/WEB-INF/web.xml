@@ -4,6 +4,7 @@
     <servlet>
         <servlet-name>com.hl.JSPProject.HelloServlet</servlet-name>
         <servlet-class>com.hl.JSPProject.HelloServlet</servlet-class>
+        <load-on-startup>10</load-on-startup>
     </servlet>
  
     <servlet-mapping>
